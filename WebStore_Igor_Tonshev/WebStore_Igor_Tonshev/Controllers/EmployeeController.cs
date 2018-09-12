@@ -55,25 +55,30 @@ namespace WebStore_Igor_Tonshev.Controllers
         [Route("edit/{id?}")]
         public IActionResult Edit(EmployeeView model)
         {
-            if (model.Id > 0)
+            if (ModelState.IsValid)
             {
-                var dbItem = _employeesData.GetById(model.Id);
+                if (model.Id > 0)
+                {
+                    var dbItem = _employeesData.GetById(model.Id);
 
-                if (ReferenceEquals(dbItem, null))
-                    return NotFound();// возвращаем результат 404 Not Found
+                    if (ReferenceEquals(dbItem, null))
+                        return NotFound();// возвращаем результат 404 Not Found
 
-                dbItem.FirstName = model.FirstName;
-                dbItem.SurName = model.SurName;
-                dbItem.Age = model.Age;
-                dbItem.Patronymic = model.Patronymic;
-                dbItem.Position = model.Position;
+                    dbItem.FirstName = model.FirstName;
+                    dbItem.SurName = model.SurName;
+                    dbItem.Age = model.Age;
+                    dbItem.Patronymic = model.Patronymic;
+                    dbItem.Position = model.Position;
+                }
+                else
+                {
+                    _employeesData.AddNew(model);
+                }
+
+                return RedirectToAction(nameof(Index));
             }
-            else
-            {
-                _employeesData.AddNew(model);
-            }
 
-            return RedirectToAction(nameof(Index));
+            return View(model);
         }
 
         [Route("delete/{id}")]
