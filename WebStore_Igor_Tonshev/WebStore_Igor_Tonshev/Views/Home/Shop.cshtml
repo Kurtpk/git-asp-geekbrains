@@ -1,0 +1,14 @@
+﻿@{
+    ViewBag.Title = "Shop";
+    Layout = "~/Views/Shared/_LayoutWithSideBar.cshtml";
+}
+
+@section top{
+    <section id="advertisement">
+        <div class="container">
+            <img src="~/template/images/shop/topBanner.jpg" alt="" />
+        </div>
+    </section>
+}
+
+@await Html.PartialAsync("Partial/_FeaturesShop")
