@@ -1,0 +1,6 @@
+D:\Курсы GeekBrains\Homework_Asp\WebStore_Igor_Tonshev\WebStore.Domain\bin\Debug\WebStore.Domain.dll
+D:\Курсы GeekBrains\Homework_Asp\WebStore_Igor_Tonshev\WebStore.Domain\bin\Debug\WebStore.Domain.pdb
+D:\Курсы GeekBrains\Homework_Asp\WebStore_Igor_Tonshev\WebStore.Domain\obj\Debug\WebStore.Domain.csprojAssemblyReference.cache
+D:\Курсы GeekBrains\Homework_Asp\WebStore_Igor_Tonshev\WebStore.Domain\obj\Debug\WebStore.Domain.csproj.CoreCompileInputs.cache
+D:\Курсы GeekBrains\Homework_Asp\WebStore_Igor_Tonshev\WebStore.Domain\obj\Debug\WebStore.Domain.dll
+D:\Курсы GeekBrains\Homework_Asp\WebStore_Igor_Tonshev\WebStore.Domain\obj\Debug\WebStore.Domain.pdb
