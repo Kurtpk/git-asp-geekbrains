@@ -55,6 +55,11 @@ namespace WebStore_Igor_Tonshev.Controllers
         [Route("edit/{id?}")]
         public IActionResult Edit(EmployeeView model)
         {
+            if (model.Age < 18 && model.Age > 75)
+            {
+                ModelState.AddModelError("Age", "Ошибка возраста!");
+            }
+
             if (ModelState.IsValid)
             {
                 if (model.Id > 0)
