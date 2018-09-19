@@ -1,0 +1,8 @@
+D:\Курсы GeekBrains\git-asp-geekbrains\WebStore_Igor_Tonshev\WebStore.DomainNew\bin\Debug\netcoreapp2.0\WebStore.DomainNew.deps.json
+D:\Курсы GeekBrains\git-asp-geekbrains\WebStore_Igor_Tonshev\WebStore.DomainNew\bin\Debug\netcoreapp2.0\WebStore.DomainNew.dll
+D:\Курсы GeekBrains\git-asp-geekbrains\WebStore_Igor_Tonshev\WebStore.DomainNew\bin\Debug\netcoreapp2.0\WebStore.DomainNew.pdb
+D:\Курсы GeekBrains\git-asp-geekbrains\WebStore_Igor_Tonshev\WebStore.DomainNew\obj\Debug\netcoreapp2.0\WebStore.DomainNew.csproj.CoreCompileInputs.cache
+D:\Курсы GeekBrains\git-asp-geekbrains\WebStore_Igor_Tonshev\WebStore.DomainNew\obj\Debug\netcoreapp2.0\WebStore.DomainNew.AssemblyInfoInputs.cache
+D:\Курсы GeekBrains\git-asp-geekbrains\WebStore_Igor_Tonshev\WebStore.DomainNew\obj\Debug\netcoreapp2.0\WebStore.DomainNew.AssemblyInfo.cs
+D:\Курсы GeekBrains\git-asp-geekbrains\WebStore_Igor_Tonshev\WebStore.DomainNew\obj\Debug\netcoreapp2.0\WebStore.DomainNew.dll
+D:\Курсы GeekBrains\git-asp-geekbrains\WebStore_Igor_Tonshev\WebStore.DomainNew\obj\Debug\netcoreapp2.0\WebStore.DomainNew.pdb

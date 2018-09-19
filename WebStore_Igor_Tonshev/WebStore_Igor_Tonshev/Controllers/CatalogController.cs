@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using WebStore.Domain.Filters;
+using WebStore.DomainNew.Filters;
 using WebStore_Igor_Tonshev.Infrastructure.Interfaces;
 using WebStore_Igor_Tonshev.Models.Product;
 
@@ -40,7 +40,8 @@ namespace WebStore_Igor_Tonshev.Controllers
                 }).OrderBy(p => p.Order).ToList()
             };
             return View(model);
-        }
+        }
+
 
         public IActionResult ProductDetails()
         {

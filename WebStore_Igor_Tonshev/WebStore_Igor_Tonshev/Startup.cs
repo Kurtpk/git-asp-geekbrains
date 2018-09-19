@@ -5,10 +5,13 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using WebStore.DAL.Context;
 using WebStore_Igor_Tonshev.Infrastructure.InMemory;
 using WebStore_Igor_Tonshev.Infrastructure.Interfaces;
+using WebStore_Igor_Tonshev.Infrastructure.Sql;
 
 namespace WebStore_Igor_Tonshev
 {
@@ -35,8 +38,13 @@ namespace WebStore_Igor_Tonshev
             //Добавляем сервисы, необходимые для mvc
             services.AddMvc();
 
+            services.AddDbContext<WebStoreContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+            //Добавляем разрешение зависимости
             services.AddSingleton<IEmployeesData, InMemoryEmployeesData>();
-            services.AddSingleton<IProductData, InMemoryProductData>();
+            //services.AddSingleton<IProductData, InMemoryProductData>();
+            
+            services.AddTransient<IProductData, SqlProductData>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
