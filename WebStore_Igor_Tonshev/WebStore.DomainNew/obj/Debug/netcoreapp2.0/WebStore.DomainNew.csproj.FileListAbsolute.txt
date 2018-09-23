@@ -6,3 +6,4 @@ D:\Курсы GeekBrains\git-asp-geekbrains\WebStore_Igor_Tonshev\WebStore.Domai
 D:\Курсы GeekBrains\git-asp-geekbrains\WebStore_Igor_Tonshev\WebStore.DomainNew\obj\Debug\netcoreapp2.0\WebStore.DomainNew.AssemblyInfo.cs
 D:\Курсы GeekBrains\git-asp-geekbrains\WebStore_Igor_Tonshev\WebStore.DomainNew\obj\Debug\netcoreapp2.0\WebStore.DomainNew.dll
 D:\Курсы GeekBrains\git-asp-geekbrains\WebStore_Igor_Tonshev\WebStore.DomainNew\obj\Debug\netcoreapp2.0\WebStore.DomainNew.pdb
+D:\Курсы GeekBrains\git-asp-geekbrains\WebStore_Igor_Tonshev\WebStore.DomainNew\obj\Debug\netcoreapp2.0\WebStore.DomainNew.csprojAssemblyReference.cache

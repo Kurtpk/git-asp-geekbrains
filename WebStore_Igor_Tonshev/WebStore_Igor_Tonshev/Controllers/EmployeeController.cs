@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using WebStore_Igor_Tonshev.Infrastructure.Interfaces;
 using WebStore_Igor_Tonshev.Models;
@@ -9,6 +10,7 @@ using WebStore_Igor_Tonshev.Models;
 namespace WebStore_Igor_Tonshev.Controllers
 {
     [Route("users")]
+    [Authorize]
     public class EmployeeController : Controller
     {
         private readonly IEmployeesData _employeesData;
@@ -18,6 +20,7 @@ namespace WebStore_Igor_Tonshev.Controllers
             _employeesData = employeesData;
         }
 
+        [AllowAnonymous]
         public IActionResult Index()
         {
             return View(_employeesData.GetAll());
