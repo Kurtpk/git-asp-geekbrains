@@ -11,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using WebStore.DAL.Context;
 using WebStore.DomainNew.Entities;
+using WebStore_Igor_Tonshev.Infrastructure;
 using WebStore_Igor_Tonshev.Infrastructure.InMemory;
 using WebStore_Igor_Tonshev.Infrastructure.Interfaces;
 using WebStore_Igor_Tonshev.Infrastructure.Sql;
@@ -79,6 +80,10 @@ namespace WebStore_Igor_Tonshev
                     "/Account/AccessDenied"; // If the AccessDeniedPath is not set here, ASP.NET Core will default to /Account/AccessDenied
                 options.SlidingExpiration = true;
             });
+
+            //Настройки для корзины
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddScoped<ICartService, CookieCartService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

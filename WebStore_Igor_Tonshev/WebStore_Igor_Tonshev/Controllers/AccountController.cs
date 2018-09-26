@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using WebStore.DomainNew.Entities;
 using WebStore_Igor_Tonshev.Models.Account;
+using WebStore.DomainNew.Model;
 
 namespace WebStore_Igor_Tonshev.Controllers
 {
@@ -71,6 +72,7 @@ namespace WebStore_Igor_Tonshev.Controllers
                 if (createResult.Succeeded)
                 {
                     await _signInManager.SignInAsync(user, false);//если успешно - производим логин
+                    await _userManager.AddToRoleAsync(user, Constants.Roles.User);// добавляем роль пользователю
                     return RedirectToAction("Index", "Home");
                 }
                 else

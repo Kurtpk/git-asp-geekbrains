@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using WebStore_Igor_Tonshev.Infrastructure.Interfaces;
 using WebStore_Igor_Tonshev.Models;
+using WebStore.DomainNew.Model;
 
 namespace WebStore_Igor_Tonshev.Controllers
 {
@@ -56,6 +57,7 @@ namespace WebStore_Igor_Tonshev.Controllers
 
         [HttpPost]
         [Route("edit/{id?}")]
+        [Authorize(Roles = Constants.Roles.Administrator)]
         public IActionResult Edit(EmployeeView model)
         {
             if (model.Age < 18 && model.Age > 75)
@@ -90,6 +92,7 @@ namespace WebStore_Igor_Tonshev.Controllers
         }
 
         [Route("delete/{id}")]
+        [Authorize(Roles = Constants.Roles.Administrator)]
         public IActionResult Delete(int id)
         {
             _employeesData.Delete(id);

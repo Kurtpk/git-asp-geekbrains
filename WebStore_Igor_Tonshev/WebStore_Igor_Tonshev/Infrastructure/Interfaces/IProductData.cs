@@ -27,5 +27,12 @@ namespace WebStore_Igor_Tonshev.Infrastructure.Interfaces
         /// <param name="filter">Фильтр товаров</param>
         /// <returns></returns>
         IEnumerable<Product> GetProducts(ProductFilter filter);
+
+        /// <summary>
+        /// Продукт
+        /// </summary>
+        /// <param name="id">Идентификатор</param>
+        /// <returns>Сущность Product, если нашёл, иначе null</returns>
+        Product GetProductById(int id);
     }
 }
