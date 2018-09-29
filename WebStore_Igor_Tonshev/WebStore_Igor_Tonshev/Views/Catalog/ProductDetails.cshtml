@@ -1,6 +1,7 @@
-﻿
+﻿@using WebStore_Igor_Tonshev.Models.Product
+@model ProductViewModel
 @{
-    ViewBag.Title = "ProductDetails";
+    ViewBag.Title = "Товар: " + Model.Name;
     Layout = "~/Views/Shared/_LayoutWithSideBar.cshtml";
 }
 

@@ -16,7 +16,7 @@ namespace WebStore_Igor_Tonshev.ViewComponents
             _productData = productData;
         }
 
-        public async Task<IViewComponentResult> InvokeAsync()
+        public IViewComponentResult Invoke()
         {
             var brands = GetBrands();
             return View(brands);

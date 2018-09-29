@@ -2,7 +2,7 @@
     <!--product-details-->
     <div class="col-sm-5">
         <div class="view-product">
-            <img src="~/template/images/product-details/1.jpg" alt="" />
+            <img src="~/template/images/shop/@Model.ImageUrl" alt="" />
             <h3>ZOOM</h3>
         </div>
         <div id="similar-product" class="carousel slide" data-ride="carousel">
@@ -41,21 +41,21 @@
         <div class="product-information">
             <!--/product-information-->
             <img src="~/template/images/product-details/new.jpg" class="newarrival" alt="" />
-            <h2>Anne Klein Sleeveless Colorblock Scuba</h2>
-            <p>Web ID: 1089772</p>
+            <h2>@Model.Name</h2>
+            <p>Артикул: 1089772</p>
             <img src="~/template/images/product-details/rating.png" alt="" />
             <span>
-                <span>US $59</span>
-                <label>Quantity:</label>
+                <span>@Model.Price.ToString("C")</span>
+                <label>Количество:</label>
                 <input type="text" value="3" />
-                <button type="button" class="btn btn-fefault cart">
+                <a asp-controller="Cart" asp-action="AddToCart" asp-route-id="@Model.Id" asp-route-returnUrl="@Context.Request.Path" class="btn btn-fefault cart">
                     <i class="fa fa-shopping-cart"></i>
-                    Add to cart
-                </button>
+                    Добавить в корзину
+                </a>
             </span>
-            <p><b>Availability:</b> In Stock</p>
+            <p><b>Доступность:</b> In Stock</p>
             <p><b>Condition:</b> New</p>
-            <p><b>Brand:</b> E-SHOPPER</p>
+            <p><b>Бренд:</b> @Model.Brand</p>
             <a href=""><img src="~/template/images/product-details/share.png" class="share img-responsive" alt="" /></a>
         </div><!--/product-information-->
     </div>
