@@ -48,6 +48,7 @@ namespace WebStore_Igor_Tonshev
             //services.AddSingleton<IProductData, InMemoryProductData>();
             
             services.AddTransient<IProductData, SqlProductData>();
+            services.AddTransient<IOrdersService, SqlOrdersService>();
 
             services.AddIdentity<User, IdentityRole>()
                 .AddEntityFrameworkStores<WebStoreContext>()
@@ -83,7 +84,7 @@ namespace WebStore_Igor_Tonshev
 
             //Настройки для корзины
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-            services.AddScoped<ICartService, CookieCartService>();
+            services.AddTransient<ICartService, CookieCartService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -103,6 +104,10 @@ namespace WebStore_Igor_Tonshev
             app.UseMvc(routes =>
             {
                 //routes.MapRoute("catalog", "catalog", new { controller = "Home", action = "Shop" });
+
+                routes.MapRoute(
+                name: "areas",
+                template: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
 
                 routes.MapRoute(
                 name: "default",

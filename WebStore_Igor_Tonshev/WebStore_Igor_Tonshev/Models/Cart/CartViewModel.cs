@@ -15,5 +15,13 @@ namespace WebStore_Igor_Tonshev.Models.Cart
                 return Items?.Sum(x => x.Value) ?? 0;
             }
         }
+
+        public decimal TotalPrice
+        {
+            get
+            {
+                return Items?.Sum(x => x.Value * x.Key.Price) ?? 0;
+            }
+        }
     }
 }
