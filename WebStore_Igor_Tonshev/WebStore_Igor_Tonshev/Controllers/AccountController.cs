@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using WebStore.DomainNew.Entities;
-using WebStore_Igor_Tonshev.Models.Account;
+using WebStore.DomainNew.Models.Account;
 using WebStore.DomainNew.Model;
 
 namespace WebStore_Igor_Tonshev.Controllers

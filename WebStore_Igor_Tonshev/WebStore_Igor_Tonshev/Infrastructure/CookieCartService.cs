@@ -5,9 +5,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WebStore.DomainNew.Filters;
-using WebStore_Igor_Tonshev.Infrastructure.Interfaces;
-using WebStore_Igor_Tonshev.Models.Cart;
-using WebStore_Igor_Tonshev.Models.Product;
+using WebStore.Interfaces;
+using WebStore.DomainNew.Models.Cart;
+using WebStore.DomainNew.Models.Product;
 
 namespace WebStore_Igor_Tonshev.Infrastructure
 {

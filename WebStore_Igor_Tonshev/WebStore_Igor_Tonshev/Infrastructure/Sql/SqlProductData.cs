@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using WebStore.DAL.Context;
 using WebStore.DomainNew.Entities;
 using WebStore.DomainNew.Filters;
-using WebStore_Igor_Tonshev.Infrastructure.Interfaces;
+using WebStore.Interfaces;
 
 namespace WebStore_Igor_Tonshev.Infrastructure.Sql
 {

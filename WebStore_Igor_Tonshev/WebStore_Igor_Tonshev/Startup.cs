@@ -13,8 +13,10 @@ using WebStore.DAL.Context;
 using WebStore.DomainNew.Entities;
 using WebStore_Igor_Tonshev.Infrastructure;
 using WebStore_Igor_Tonshev.Infrastructure.InMemory;
-using WebStore_Igor_Tonshev.Infrastructure.Interfaces;
+using WebStore.Interfaces;
 using WebStore_Igor_Tonshev.Infrastructure.Sql;
+using WebStore.Interfaces.Api;
+using WebStore.Clients.Services.Values;
 
 namespace WebStore_Igor_Tonshev
 {
@@ -85,6 +87,9 @@ namespace WebStore_Igor_Tonshev
             //Настройки для корзины
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddTransient<ICartService, CookieCartService>();
+
+            // Добавляем реализацию клиента
+            services.AddTransient<IValuesService, ValuesClient>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

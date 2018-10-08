@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using WebStore.DomainNew.Filters;
-using WebStore_Igor_Tonshev.Infrastructure.Interfaces;
+using WebStore.Interfaces;
 
 namespace WebStore_Igor_Tonshev.Areas.Admin.Controllers
 {

@@ -1,0 +1,12 @@
+D:\Курсы GeekBrains\git-asp-geekbrains\WebStore_Igor_Tonshev\WebStore.Interfaces\bin\Debug\netcoreapp2.0\WebStore.Interfaces.deps.json
+D:\Курсы GeekBrains\git-asp-geekbrains\WebStore_Igor_Tonshev\WebStore.Interfaces\bin\Debug\netcoreapp2.0\WebStore.Interfaces.dll
+D:\Курсы GeekBrains\git-asp-geekbrains\WebStore_Igor_Tonshev\WebStore.Interfaces\bin\Debug\netcoreapp2.0\WebStore.Interfaces.pdb
+D:\Курсы GeekBrains\git-asp-geekbrains\WebStore_Igor_Tonshev\WebStore.Interfaces\bin\Debug\netcoreapp2.0\WebStore.DomainNew.dll
+D:\Курсы GeekBrains\git-asp-geekbrains\WebStore_Igor_Tonshev\WebStore.Interfaces\bin\Debug\netcoreapp2.0\WebStore.DomainNew.pdb
+D:\Курсы GeekBrains\git-asp-geekbrains\WebStore_Igor_Tonshev\WebStore.Interfaces\obj\Debug\netcoreapp2.0\WebStore.Interfaces.csprojAssemblyReference.cache
+D:\Курсы GeekBrains\git-asp-geekbrains\WebStore_Igor_Tonshev\WebStore.Interfaces\obj\Debug\netcoreapp2.0\WebStore.Interfaces.csproj.CoreCompileInputs.cache
+D:\Курсы GeekBrains\git-asp-geekbrains\WebStore_Igor_Tonshev\WebStore.Interfaces\obj\Debug\netcoreapp2.0\WebStore.Interfaces.AssemblyInfoInputs.cache
+D:\Курсы GeekBrains\git-asp-geekbrains\WebStore_Igor_Tonshev\WebStore.Interfaces\obj\Debug\netcoreapp2.0\WebStore.Interfaces.AssemblyInfo.cs
+D:\Курсы GeekBrains\git-asp-geekbrains\WebStore_Igor_Tonshev\WebStore.Interfaces\obj\Debug\netcoreapp2.0\WebStore.Interfaces.csproj.CopyComplete
+D:\Курсы GeekBrains\git-asp-geekbrains\WebStore_Igor_Tonshev\WebStore.Interfaces\obj\Debug\netcoreapp2.0\WebStore.Interfaces.dll
+D:\Курсы GeekBrains\git-asp-geekbrains\WebStore_Igor_Tonshev\WebStore.Interfaces\obj\Debug\netcoreapp2.0\WebStore.Interfaces.pdb

@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using WebStore_Igor_Tonshev.Infrastructure.Interfaces;
-using WebStore_Igor_Tonshev.Models;
+using WebStore.Interfaces;
+using WebStore.DomainNew.Models;
 
 namespace WebStore_Igor_Tonshev.Infrastructure.InMemory
 {

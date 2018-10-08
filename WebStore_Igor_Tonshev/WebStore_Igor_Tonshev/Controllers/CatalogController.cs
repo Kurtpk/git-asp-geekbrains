@@ -4,8 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using WebStore.DomainNew.Filters;
-using WebStore_Igor_Tonshev.Infrastructure.Interfaces;
-using WebStore_Igor_Tonshev.Models.Product;
+using WebStore.Interfaces;
+using WebStore.DomainNew.Models.Product;
 
 namespace WebStore_Igor_Tonshev.Controllers
 {

@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using WebStore_Igor_Tonshev.Infrastructure.Interfaces;
+using WebStore.Interfaces;
 
 namespace WebStore_Igor_Tonshev.ViewComponents
 {
