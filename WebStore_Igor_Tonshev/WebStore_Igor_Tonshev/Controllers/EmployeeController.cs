@@ -4,8 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using WebStore_Igor_Tonshev.Infrastructure.Interfaces;
-using WebStore_Igor_Tonshev.Models;
+using WebStore.Interfaces;
+using WebStore.DomainNew.Models;
 using WebStore.DomainNew.Model;
 
 namespace WebStore_Igor_Tonshev.Controllers

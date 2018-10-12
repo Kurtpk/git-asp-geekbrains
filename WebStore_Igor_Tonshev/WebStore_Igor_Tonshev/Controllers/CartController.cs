@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using WebStore_Igor_Tonshev.Infrastructure.Interfaces;
-using WebStore_Igor_Tonshev.Models.Cart;
-using WebStore_Igor_Tonshev.Models.Order;
+using WebStore.Interfaces;
+using WebStore.DomainNew.Models.Cart;
+using WebStore.DomainNew.Models.Order;
 
 namespace WebStore_Igor_Tonshev.Controllers
 {

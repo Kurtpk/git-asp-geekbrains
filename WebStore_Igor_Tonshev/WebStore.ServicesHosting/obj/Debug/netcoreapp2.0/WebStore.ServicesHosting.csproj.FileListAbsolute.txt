@@ -1,0 +1,10 @@
+D:\Курсы GeekBrains\git-asp-geekbrains\WebStore_Igor_Tonshev\WebStore.ServicesHosting\bin\Debug\netcoreapp2.0\WebStore.ServicesHosting.deps.json
+D:\Курсы GeekBrains\git-asp-geekbrains\WebStore_Igor_Tonshev\WebStore.ServicesHosting\bin\Debug\netcoreapp2.0\WebStore.ServicesHosting.runtimeconfig.json
+D:\Курсы GeekBrains\git-asp-geekbrains\WebStore_Igor_Tonshev\WebStore.ServicesHosting\bin\Debug\netcoreapp2.0\WebStore.ServicesHosting.runtimeconfig.dev.json
+D:\Курсы GeekBrains\git-asp-geekbrains\WebStore_Igor_Tonshev\WebStore.ServicesHosting\bin\Debug\netcoreapp2.0\WebStore.ServicesHosting.dll
+D:\Курсы GeekBrains\git-asp-geekbrains\WebStore_Igor_Tonshev\WebStore.ServicesHosting\bin\Debug\netcoreapp2.0\WebStore.ServicesHosting.pdb
+D:\Курсы GeekBrains\git-asp-geekbrains\WebStore_Igor_Tonshev\WebStore.ServicesHosting\obj\Debug\netcoreapp2.0\WebStore.ServicesHosting.csproj.CoreCompileInputs.cache
+D:\Курсы GeekBrains\git-asp-geekbrains\WebStore_Igor_Tonshev\WebStore.ServicesHosting\obj\Debug\netcoreapp2.0\WebStore.ServicesHosting.AssemblyInfoInputs.cache
+D:\Курсы GeekBrains\git-asp-geekbrains\WebStore_Igor_Tonshev\WebStore.ServicesHosting\obj\Debug\netcoreapp2.0\WebStore.ServicesHosting.AssemblyInfo.cs
+D:\Курсы GeekBrains\git-asp-geekbrains\WebStore_Igor_Tonshev\WebStore.ServicesHosting\obj\Debug\netcoreapp2.0\WebStore.ServicesHosting.dll
+D:\Курсы GeekBrains\git-asp-geekbrains\WebStore_Igor_Tonshev\WebStore.ServicesHosting\obj\Debug\netcoreapp2.0\WebStore.ServicesHosting.pdb
