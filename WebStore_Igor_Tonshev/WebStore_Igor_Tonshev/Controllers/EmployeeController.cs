@@ -69,16 +69,7 @@ namespace WebStore_Igor_Tonshev.Controllers
             {
                 if (model.Id > 0)
                 {
-                    var dbItem = _employeesData.GetById(model.Id);
-
-                    if (ReferenceEquals(dbItem, null))
-                        return NotFound();// возвращаем результат 404 Not Found
-
-                    dbItem.FirstName = model.FirstName;
-                    dbItem.SurName = model.SurName;
-                    dbItem.Age = model.Age;
-                    dbItem.Patronymic = model.Patronymic;
-                    dbItem.Position = model.Position;
+                    _employeesData.UpdateEmployee(model.Id, model);
                 }
                 else
                 {

@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using WebStore.Interfaces;
 using WebStore.DomainNew.Models.Cart;
 using WebStore.DomainNew.Models.Order;
+using WebStore.DomainNew.Dto.Order;
 
 namespace WebStore_Igor_Tonshev.Controllers
 {
@@ -62,10 +63,13 @@ namespace WebStore_Igor_Tonshev.Controllers
         {
             if (ModelState.IsValid)
             {
-                var orderResult = _ordersService.CreateOrder(
-                    model,
-                    _cartService.TransformCart(),
-                    User.Identity.Name);
+                var orderModel = new CreateOrderModel()
+                {
+                    OrderItems = _cartService.TCart(),
+                    OrderViewModel = model
+                };
+
+                var orderResult = _ordersService.CreateOrder(orderModel, User.Identity.Name);
                 _cartService.RemoveAll();
                 return RedirectToAction("OrderConfirmed", new { id = orderResult.Id });
             }

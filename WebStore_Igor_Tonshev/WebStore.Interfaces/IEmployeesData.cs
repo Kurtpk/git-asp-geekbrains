@@ -19,6 +19,14 @@ namespace WebStore.Interfaces
         EmployeeView GetById(int id);
 
         /// <summary>
+        /// Обновление сотрудника
+        /// </summary>
+        /// <param name="id">Id сотрудника</param>
+        /// <param name="entity">Сотрудник для обновления</param>
+        /// <returns></returns>
+        EmployeeView UpdateEmployee(int id, EmployeeView entity);
+
+        /// <summary>
         /// Добавить нового
         /// </summary>
         /// <param name="model"></param>
