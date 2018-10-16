@@ -8,8 +8,9 @@ using WebStore.DomainNew.Filters;
 using WebStore.Interfaces;
 using WebStore.DomainNew.Models.Cart;
 using WebStore.DomainNew.Models.Product;
+using WebStore.DomainNew.Dto.Order;
 
-namespace WebStore_Igor_Tonshev.Infrastructure
+namespace WebStore.Services
 {
     public class CookieCartService : ICartService
     {
@@ -139,6 +140,21 @@ namespace WebStore_Igor_Tonshev.Infrastructure
             };
 
             return r;
+        }
+
+        public List<OrderItemDto> TCart()
+        {
+            var orderItems = _productData.GetProducts(new ProductFilter()
+            {
+                Ids = Cart.Items.Select(i => i.ProductId).ToList()
+            }).Select(p => new OrderItemDto()
+            {
+                Id = p.Id,
+                Price = p.Price,
+                Quantity = Cart.Items.First(i => i.ProductId == p.Id).Quantity
+            }).ToList();
+
+            return orderItems;
         }
     }
 }

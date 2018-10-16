@@ -1,0 +1,16 @@
+D:\Курсы GeekBrains\git-asp-geekbrains\WebStore_Igor_Tonshev\WebStore.Services\bin\Debug\netcoreapp2.0\WebStore.Services.deps.json
+D:\Курсы GeekBrains\git-asp-geekbrains\WebStore_Igor_Tonshev\WebStore.Services\bin\Debug\netcoreapp2.0\WebStore.Services.dll
+D:\Курсы GeekBrains\git-asp-geekbrains\WebStore_Igor_Tonshev\WebStore.Services\bin\Debug\netcoreapp2.0\WebStore.DAL.dll
+D:\Курсы GeekBrains\git-asp-geekbrains\WebStore_Igor_Tonshev\WebStore.Services\bin\Debug\netcoreapp2.0\WebStore.DomainNew.dll
+D:\Курсы GeekBrains\git-asp-geekbrains\WebStore_Igor_Tonshev\WebStore.Services\bin\Debug\netcoreapp2.0\WebStore.Interfaces.dll
+D:\Курсы GeekBrains\git-asp-geekbrains\WebStore_Igor_Tonshev\WebStore.Services\bin\Debug\netcoreapp2.0\WebStore.DAL.pdb
+D:\Курсы GeekBrains\git-asp-geekbrains\WebStore_Igor_Tonshev\WebStore.Services\bin\Debug\netcoreapp2.0\WebStore.DomainNew.pdb
+D:\Курсы GeekBrains\git-asp-geekbrains\WebStore_Igor_Tonshev\WebStore.Services\bin\Debug\netcoreapp2.0\WebStore.Interfaces.pdb
+D:\Курсы GeekBrains\git-asp-geekbrains\WebStore_Igor_Tonshev\WebStore.Services\obj\Debug\netcoreapp2.0\WebStore.Services.csprojAssemblyReference.cache
+D:\Курсы GeekBrains\git-asp-geekbrains\WebStore_Igor_Tonshev\WebStore.Services\obj\Debug\netcoreapp2.0\WebStore.Services.csproj.CoreCompileInputs.cache
+D:\Курсы GeekBrains\git-asp-geekbrains\WebStore_Igor_Tonshev\WebStore.Services\obj\Debug\netcoreapp2.0\WebStore.Services.AssemblyInfoInputs.cache
+D:\Курсы GeekBrains\git-asp-geekbrains\WebStore_Igor_Tonshev\WebStore.Services\obj\Debug\netcoreapp2.0\WebStore.Services.AssemblyInfo.cs
+D:\Курсы GeekBrains\git-asp-geekbrains\WebStore_Igor_Tonshev\WebStore.Services\obj\Debug\netcoreapp2.0\WebStore.Services.csproj.CopyComplete
+D:\Курсы GeekBrains\git-asp-geekbrains\WebStore_Igor_Tonshev\WebStore.Services\bin\Debug\netcoreapp2.0\WebStore.Services.pdb
+D:\Курсы GeekBrains\git-asp-geekbrains\WebStore_Igor_Tonshev\WebStore.Services\obj\Debug\netcoreapp2.0\WebStore.Services.dll
+D:\Курсы GeekBrains\git-asp-geekbrains\WebStore_Igor_Tonshev\WebStore.Services\obj\Debug\netcoreapp2.0\WebStore.Services.pdb

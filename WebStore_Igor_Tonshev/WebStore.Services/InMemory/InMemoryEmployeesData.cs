@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using WebStore.Interfaces;
 using WebStore.DomainNew.Models;
 
-namespace WebStore_Igor_Tonshev.Infrastructure.InMemory
+namespace WebStore.Services.InMemory
 {
     public class InMemoryEmployeesData : IEmployeesData
     {
@@ -19,7 +19,6 @@ namespace WebStore_Igor_Tonshev.Infrastructure.InMemory
                 new EmployeeView(){Id = 2, FirstName = "Иван", SurName = "Холявко", Patronymic = "Александрович", Age = 30, Position = "Программист"},
                 new EmployeeView(){Id = 3, FirstName = "Роберт", SurName = "Серов", Patronymic = "Сигизмундович", Age = 50, Position = "Зав. склада"}
             };
-
         }
 
         public IEnumerable<EmployeeView> GetAll()
@@ -30,6 +29,24 @@ namespace WebStore_Igor_Tonshev.Infrastructure.InMemory
         public EmployeeView GetById(int id)
         {
             return _employees.FirstOrDefault(e => e.Id == id);
+        }
+
+        public EmployeeView UpdateEmployee(int id, EmployeeView entity)
+        {
+            if (entity == null)
+                throw new ArgumentNullException(nameof(entity));
+
+            var employee = _employees.FirstOrDefault(e => e.Id.Equals(id));
+            if (employee == null)
+                throw new InvalidOperationException("Employee not exits");
+
+            employee.Age = entity.Age;
+            employee.FirstName = entity.FirstName;
+            employee.Patronymic = entity.Patronymic;
+            employee.SurName = entity.SurName;
+            employee.Position = entity.Position;
+
+            return employee;
         }
 
         public void AddNew(EmployeeView model)

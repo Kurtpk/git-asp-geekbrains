@@ -11,12 +11,13 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using WebStore.DAL.Context;
 using WebStore.DomainNew.Entities;
-using WebStore_Igor_Tonshev.Infrastructure;
-using WebStore_Igor_Tonshev.Infrastructure.InMemory;
+using WebStore.Services;
+using WebStore.Services.InMemory;
 using WebStore.Interfaces;
-using WebStore_Igor_Tonshev.Infrastructure.Sql;
-using WebStore.Interfaces.Api;
-using WebStore.Clients.Services.Values;
+using WebStore.Services.Sql;
+using WebStore.Clients.Services.Employees;
+using WebStore.Clients.Services.Products;
+using WebStore.Clients.Services.Orders;
 
 namespace WebStore_Igor_Tonshev
 {
@@ -46,11 +47,11 @@ namespace WebStore_Igor_Tonshev
             services.AddDbContext<WebStoreContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             //Добавляем разрешение зависимости
-            services.AddSingleton<IEmployeesData, InMemoryEmployeesData>();
+            services.AddSingleton<IEmployeesData, EmployeesClient>();
             //services.AddSingleton<IProductData, InMemoryProductData>();
             
-            services.AddTransient<IProductData, SqlProductData>();
-            services.AddTransient<IOrdersService, SqlOrdersService>();
+            services.AddTransient<IProductData, ProductsClient>();
+            services.AddTransient<IOrdersService, OrdersClient>();
 
             services.AddIdentity<User, IdentityRole>()
                 .AddEntityFrameworkStores<WebStoreContext>()
@@ -87,9 +88,6 @@ namespace WebStore_Igor_Tonshev
             //Настройки для корзины
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddTransient<ICartService, CookieCartService>();
-
-            // Добавляем реализацию клиента
-            services.AddTransient<IValuesService, ValuesClient>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

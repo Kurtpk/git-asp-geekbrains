@@ -1,4 +1,6 @@
-﻿using WebStore.DomainNew.Models.Cart;
+﻿using System.Collections.Generic;
+using WebStore.DomainNew.Dto.Order;
+using WebStore.DomainNew.Models.Cart;
 
 namespace WebStore.Interfaces
 {
@@ -13,5 +15,7 @@ namespace WebStore.Interfaces
         void AddToCart(int id);
 
         CartViewModel TransformCart();
+
+        List<OrderItemDto> TCart();
     }
 }

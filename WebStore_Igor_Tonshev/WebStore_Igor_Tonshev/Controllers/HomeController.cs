@@ -3,23 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using WebStore.Interfaces.Api;
 
 namespace WebStore_Igor_Tonshev.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly IValuesService _valuesService;
 
-        public HomeController(IValuesService valuesService)
+        public HomeController()
         {
-            _valuesService = valuesService;
         }
 
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
-            var values = await _valuesService.GetAsync();
-            return View(values);
+            return View();
         }
 
         public IActionResult ContactUs()

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using WebStore.DomainNew.Dto.Product;
 using WebStore.DomainNew.Entities;
 using WebStore.DomainNew.Filters;
 
@@ -13,26 +14,26 @@ namespace WebStore.Interfaces
         /// Список секций
         /// </summary>
         /// <returns></returns>
-        IEnumerable<Section> GetSections();
+        IEnumerable<SectionDto> GetSections();
 
         /// <summary>
         /// Список брендов
         /// </summary>
         /// <returns></returns>
-        IEnumerable<Brand> GetBrands();
+        IEnumerable<BrandDto> GetBrands();
 
         /// <summary>
         /// Список товаров
         /// </summary>
         /// <param name="filter">Фильтр товаров</param>
         /// <returns></returns>
-        IEnumerable<Product> GetProducts(ProductFilter filter);
+        IEnumerable<ProductDto> GetProducts(ProductFilter filter);
 
         /// <summary>
         /// Продукт
         /// </summary>
         /// <param name="id">Идентификатор</param>
         /// <returns>Сущность Product, если нашёл, иначе null</returns>
-        Product GetProductById(int id);
+        ProductDto GetProductById(int id);
     }
 }

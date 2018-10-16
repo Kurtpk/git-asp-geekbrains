@@ -1,19 +1,10 @@
-﻿@model IEnumerable<string>
-
-@{
+﻿@{
     ViewBag.Title = "Home";
 }
 
 @section top{
     @await Html.PartialAsync("Partial/_Slider")
 }
-
-<div>
-    @foreach (var item in Model)
-    {
-        <p>@item</p>
-    }
-</div>
 
 @await Html.PartialAsync("Partial/_Features")
 
