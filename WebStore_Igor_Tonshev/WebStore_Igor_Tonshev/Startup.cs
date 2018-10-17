@@ -18,6 +18,8 @@ using WebStore.Services.Sql;
 using WebStore.Clients.Services.Employees;
 using WebStore.Clients.Services.Products;
 using WebStore.Clients.Services.Orders;
+using WebStore.Interfaces.Api;
+using WebStore.Clients.Services.Users;
 
 namespace WebStore_Igor_Tonshev
 {
@@ -44,8 +46,6 @@ namespace WebStore_Igor_Tonshev
             //Добавляем сервисы, необходимые для mvc
             services.AddMvc();
 
-            services.AddDbContext<WebStoreContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-
             //Добавляем разрешение зависимости
             services.AddSingleton<IEmployeesData, EmployeesClient>();
             //services.AddSingleton<IProductData, InMemoryProductData>();
@@ -53,8 +53,21 @@ namespace WebStore_Igor_Tonshev
             services.AddTransient<IProductData, ProductsClient>();
             services.AddTransient<IOrdersService, OrdersClient>();
 
+            services.AddTransient<IUsersClient, UsersClient>();
+
+            services.AddTransient<IUserStore<User>, UsersClient>();
+            services.AddTransient<IUserRoleStore<User>, UsersClient>();
+            services.AddTransient<IUserClaimStore<User>, UsersClient>();
+            services.AddTransient<IUserPasswordStore<User>, UsersClient>();
+            services.AddTransient<IUserTwoFactorStore<User>, UsersClient>();
+            services.AddTransient<IUserEmailStore<User>, UsersClient>();
+            services.AddTransient<IUserPhoneNumberStore<User>, UsersClient>();
+            services.AddTransient<IUserLoginStore<User>, UsersClient>();
+            services.AddTransient<IUserLockoutStore<User>, UsersClient>();
+
+            services.AddTransient<IRoleStore<IdentityRole>, RolesClient>();
+
             services.AddIdentity<User, IdentityRole>()
-                .AddEntityFrameworkStores<WebStoreContext>()
                 .AddDefaultTokenProviders();
 
             services.Configure<IdentityOptions>(options =>

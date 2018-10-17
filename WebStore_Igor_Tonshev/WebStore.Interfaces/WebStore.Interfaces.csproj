@@ -8,8 +8,4 @@
     <ProjectReference Include="..\WebStore.DomainNew\WebStore.DomainNew.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Api\" />
-  </ItemGroup>
-
 </Project>
