@@ -6,7 +6,7 @@ using WebStore.DomainNew.Entities;
 using Microsoft.EntityFrameworkCore;
 using WebStore.DAL.Context;
 
-namespace WebStore_Igor_Tonshev.Data
+namespace WebStore.ServicesHosting.Data
 {
     public class DbInitializer
     {
