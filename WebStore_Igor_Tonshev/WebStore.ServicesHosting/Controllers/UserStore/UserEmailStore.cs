@@ -35,7 +35,7 @@ namespace WebStore.ServicesHosting.Controllers
             await _userStore.SetEmailConfirmedAsync(user, confirmed);
         }
 
-        [HttpGet("user/email/{normalizedEmail}")]
+        [HttpGet("email/{normalizedEmail}")]
         public async Task<User> FindByEmailAsync(string normalizedEmail)
         {
             return await _userStore.FindByEmailAsync(normalizedEmail);

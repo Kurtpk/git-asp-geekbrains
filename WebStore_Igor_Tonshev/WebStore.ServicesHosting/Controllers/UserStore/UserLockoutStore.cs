@@ -18,19 +18,19 @@ namespace WebStore.ServicesHosting.Controllers
             return await _userStore.GetLockoutEndDateAsync(user);
         }
 
-        [HttpPost("newLockoutEndDate")]
+        [HttpPost("lockoutEndDate/set")]
         public Task SetLockoutEndDateAsync(SetLockoutDto setLockoutDto)
         {
             return _userStore.SetLockoutEndDateAsync(setLockoutDto.User, setLockoutDto.LockoutEnd);
         }
 
-        [HttpPost("nextAccessFailedCount")]
+        [HttpPost("accessFailedCount/increment")]
         public async Task<int> IncrementAccessFailedCountAsync(User user)
         {
             return await _userStore.IncrementAccessFailedCountAsync(user);
         }
 
-        [HttpPost("newAccessFailedCount")]
+        [HttpPost("accessFailedCount/reset")]
         public Task ResetAccessFailedCountAsync(User user)
         {
             return _userStore.ResetAccessFailedCountAsync(user);

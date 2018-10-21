@@ -26,7 +26,7 @@ namespace WebStore.Clients.Services.Users
 
         public async Task<IdentityResult> CreateAsync(IdentityRole role, CancellationToken cancellationToken)
         {
-            var url = $"{ServiceAddress}/newrole";
+            var url = $"{ServiceAddress}";
             var result = await PostAsync(url, role);
             var ret = await result.Content.ReadAsAsync<bool>();
             return ret ? IdentityResult.Success : IdentityResult.Failed();
@@ -42,7 +42,7 @@ namespace WebStore.Clients.Services.Users
 
         public async Task<IdentityResult> DeleteAsync(IdentityRole role, CancellationToken cancellationToken)
         {
-            var url = $"{ServiceAddress}";
+            var url = $"{ServiceAddress}/delete";
             var result = await PostAsync(url, role);
             var ret = await result.Content.ReadAsAsync<bool>();
             return ret ? IdentityResult.Success : IdentityResult.Failed();

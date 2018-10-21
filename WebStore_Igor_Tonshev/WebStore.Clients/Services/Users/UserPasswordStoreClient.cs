@@ -15,7 +15,7 @@ namespace WebStore.Clients.Services.Users
         public async Task SetPasswordHashAsync(User user, string passwordHash, CancellationToken cancellationToken)
         {
             user.PasswordHash = passwordHash;
-            var url = $"{ServiceAddress}/newPasswordHash";
+            var url = $"{ServiceAddress}/passwordHash/add";
             await PostAsync(url, new PasswordHashDto() { User = user, Hash = passwordHash });
         }
 

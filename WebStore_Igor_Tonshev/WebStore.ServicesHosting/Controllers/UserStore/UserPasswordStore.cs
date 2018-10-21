@@ -12,7 +12,7 @@ namespace WebStore.ServicesHosting.Controllers
     {
         #region IUserPasswordStore
 
-        [HttpPost("newPasswordHash")]
+        [HttpPost("passwordHash/add")]
         public async Task<string> SetPasswordHashAsync([FromBody]PasswordHashDto hashDto)
         {
             await _userStore.SetPasswordHashAsync(hashDto.User, hashDto.Hash);

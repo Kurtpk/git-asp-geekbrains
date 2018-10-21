@@ -22,25 +22,25 @@ namespace WebStore.Clients.Services.Users
 
         public Task AddClaimsAsync(User user, IEnumerable<Claim> claims, CancellationToken cancellationToken)
         {
-            var url = $"{ServiceAddress}/newclaim";
+            var url = $"{ServiceAddress}/claims/add";
             return PostAsync(url, new AddClaimsDto() { User = user, Claims = claims });
         }
 
         public Task ReplaceClaimAsync(User user, Claim claim, Claim newClaim, CancellationToken cancellationToken)
         {
-            var url = $"{ServiceAddress}/claim/newPlace";
+            var url = $"{ServiceAddress}/claims/replace";
             return PostAsync(url, new ReplaceClaimsDto() { User = user, Claim = claim, NewClaim = newClaim });
         }
 
         public Task RemoveClaimsAsync(User user, IEnumerable<Claim> claims, CancellationToken cancellationToken)
         {
-            var url = $"{ServiceAddress}/claim";
+            var url = $"{ServiceAddress}/claims/remove";
             return PostAsync(url, new RemoveClaimsDto() { User = user, Claims = claims });
         }
 
         public async Task<IList<User>> GetUsersForClaimAsync(Claim claim, CancellationToken cancellationToken)
         {
-            var url = $"{ServiceAddress}/usersForClaim";
+            var url = $"{ServiceAddress}/claims/user";
             var result = await PostAsync(url, claim);
             return await result.Content.ReadAsAsync<List<User>>();
         }

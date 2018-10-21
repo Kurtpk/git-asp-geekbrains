@@ -15,13 +15,13 @@ namespace WebStore.Clients.Services.Users
 
         public Task AddToRoleAsync(User user, string roleName, CancellationToken cancellationToken)
         {
-            var url = $"{ServiceAddress}/newRole/{roleName}";
+            var url = $"{ServiceAddress}/roles/add/{roleName}";
             return PostAsync(url, user);
         }
 
         public Task RemoveFromRoleAsync(User user, string roleName, CancellationToken cancellationToken)
         {
-            var url = $"{ServiceAddress}/{roleName}";
+            var url = $"{ServiceAddress}/roles/remove/{roleName}";
             return PostAsync(url, user);
         }
 

@@ -16,13 +16,13 @@ namespace WebStore.Clients.Services.Users
 
         public Task AddLoginAsync(User user, UserLoginInfo login, CancellationToken cancellationToken)
         {
-            var url = $"{ServiceAddress}/newLogin";
+            var url = $"{ServiceAddress}/logins/add";
             return PostAsync(url, new AddLoginDto() { User = user, UserLoginInfo = login });
         }
 
         public Task RemoveLoginAsync(User user, string loginProvider, string providerKey, CancellationToken cancellationToken)
         {
-            var url = $"{ServiceAddress}/login/{loginProvider}/{providerKey}";
+            var url = $"{ServiceAddress}/logins/remove/{loginProvider}/{providerKey}";
             return PostAsync(url, user);
         }
 
@@ -35,7 +35,7 @@ namespace WebStore.Clients.Services.Users
 
         public Task<User> FindByLoginAsync(string loginProvider, string providerKey, CancellationToken cancellationToken)
         {
-            var url = $"{ServiceAddress}/user/login/{loginProvider}/{providerKey}";
+            var url = $"{ServiceAddress}/logins/{loginProvider}/{providerKey}";
             return GetAsync<User>(url);
         }
 

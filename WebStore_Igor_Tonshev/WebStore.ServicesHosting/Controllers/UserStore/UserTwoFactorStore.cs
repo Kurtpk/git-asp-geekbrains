@@ -11,7 +11,7 @@ namespace WebStore.ServicesHosting.Controllers
     {
         #region IUserTwoFactorStore
 
-        [HttpPost("twoFactor/{enabled}")]
+        [HttpPost("twoFactorEnabled/{enabled}")]
         public async Task SetTwoFactorEnabledAsync([FromBody]User user, bool enabled)
         {
             await _userStore.SetTwoFactorEnabledAsync(user, enabled);

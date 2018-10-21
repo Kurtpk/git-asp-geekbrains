@@ -23,20 +23,20 @@ namespace WebStore.Clients.Services.Users
         public Task SetLockoutEndDateAsync(User user, DateTimeOffset? lockoutEnd, CancellationToken cancellationToken)
         {
             user.LockoutEnd = lockoutEnd;
-            var url = $"{ServiceAddress}/newLockoutEndDate";
+            var url = $"{ServiceAddress}/lockoutEndDate/set";
             return PostAsync(url, new SetLockoutDto() { User = user, LockoutEnd = lockoutEnd });
         }
 
         public async Task<int> IncrementAccessFailedCountAsync(User user, CancellationToken cancellationToken)
         {
-            var url = $"{ServiceAddress}/nextAccessFailedCount";
+            var url = $"{ServiceAddress}/accessFailedCount/increment";
             var result = await PostAsync(url, user);
             return await result.Content.ReadAsAsync<int>();
         }
 
         public Task ResetAccessFailedCountAsync(User user, CancellationToken cancellationToken)
         {
-            var url = $"{ServiceAddress}/newAccessFailedCount";
+            var url = $"{ServiceAddress}/accessFailedCount/reset";
             return PostAsync(url, user);
         }
 

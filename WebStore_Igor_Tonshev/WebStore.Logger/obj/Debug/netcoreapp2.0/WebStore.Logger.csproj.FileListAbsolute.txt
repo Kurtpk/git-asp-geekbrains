@@ -1,0 +1,9 @@
+D:\Курсы GeekBrains\git-asp-geekbrains\WebStore_Igor_Tonshev\WebStore.Logger\bin\Debug\netcoreapp2.0\WebStore.Logger.deps.json
+D:\Курсы GeekBrains\git-asp-geekbrains\WebStore_Igor_Tonshev\WebStore.Logger\bin\Debug\netcoreapp2.0\WebStore.Logger.dll
+D:\Курсы GeekBrains\git-asp-geekbrains\WebStore_Igor_Tonshev\WebStore.Logger\obj\Debug\netcoreapp2.0\WebStore.Logger.csproj.CoreCompileInputs.cache
+D:\Курсы GeekBrains\git-asp-geekbrains\WebStore_Igor_Tonshev\WebStore.Logger\obj\Debug\netcoreapp2.0\WebStore.Logger.AssemblyInfoInputs.cache
+D:\Курсы GeekBrains\git-asp-geekbrains\WebStore_Igor_Tonshev\WebStore.Logger\obj\Debug\netcoreapp2.0\WebStore.Logger.AssemblyInfo.cs
+D:\Курсы GeekBrains\git-asp-geekbrains\WebStore_Igor_Tonshev\WebStore.Logger\obj\Debug\netcoreapp2.0\WebStore.Logger.csprojAssemblyReference.cache
+D:\Курсы GeekBrains\git-asp-geekbrains\WebStore_Igor_Tonshev\WebStore.Logger\bin\Debug\netcoreapp2.0\WebStore.Logger.pdb
+D:\Курсы GeekBrains\git-asp-geekbrains\WebStore_Igor_Tonshev\WebStore.Logger\obj\Debug\netcoreapp2.0\WebStore.Logger.dll
+D:\Курсы GeekBrains\git-asp-geekbrains\WebStore_Igor_Tonshev\WebStore.Logger\obj\Debug\netcoreapp2.0\WebStore.Logger.pdb

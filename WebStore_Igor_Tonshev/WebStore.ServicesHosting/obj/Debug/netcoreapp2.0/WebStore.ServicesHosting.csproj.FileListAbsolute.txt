@@ -18,3 +18,6 @@ D:\Курсы GeekBrains\git-asp-geekbrains\WebStore_Igor_Tonshev\WebStore.Servi
 D:\Курсы GeekBrains\git-asp-geekbrains\WebStore_Igor_Tonshev\WebStore.ServicesHosting\bin\Debug\netcoreapp2.0\WebStore.Interfaces.pdb
 D:\Курсы GeekBrains\git-asp-geekbrains\WebStore_Igor_Tonshev\WebStore.ServicesHosting\bin\Debug\netcoreapp2.0\WebStore.Services.pdb
 D:\Курсы GeekBrains\git-asp-geekbrains\WebStore_Igor_Tonshev\WebStore.ServicesHosting\obj\Debug\netcoreapp2.0\WebStore.ServicesHosting.csproj.CopyComplete
+D:\Курсы GeekBrains\git-asp-geekbrains\WebStore_Igor_Tonshev\WebStore.ServicesHosting\bin\Debug\netcoreapp2.0\WebStore.Logger.dll
+D:\Курсы GeekBrains\git-asp-geekbrains\WebStore_Igor_Tonshev\WebStore.ServicesHosting\bin\Debug\netcoreapp2.0\log4net.config
+D:\Курсы GeekBrains\git-asp-geekbrains\WebStore_Igor_Tonshev\WebStore.ServicesHosting\bin\Debug\netcoreapp2.0\WebStore.Logger.pdb

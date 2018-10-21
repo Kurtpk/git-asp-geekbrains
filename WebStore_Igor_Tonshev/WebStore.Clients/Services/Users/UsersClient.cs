@@ -64,7 +64,7 @@ namespace WebStore.Clients.Services.Users
 
         public async Task<IdentityResult> CreateAsync(User user, CancellationToken cancellationToken)
         {
-            var url = $"{ServiceAddress}/user";
+            var url = $"{ServiceAddress}";
             var result = await PostAsync(url, user);
             var ret = await result.Content.ReadAsAsync<bool>();
             return ret ? IdentityResult.Success : IdentityResult.Failed();
@@ -73,7 +73,7 @@ namespace WebStore.Clients.Services.Users
 
         public async Task<IdentityResult> UpdateAsync(User user, CancellationToken cancellationToken)
         {
-            var url = $"{ServiceAddress}/user";
+            var url = $"{ServiceAddress}";
             var result = await PutAsync(url, user);
             var ret = await result.Content.ReadAsAsync<bool>();
             return ret ? IdentityResult.Success : IdentityResult.Failed();
@@ -81,7 +81,7 @@ namespace WebStore.Clients.Services.Users
 
         public async Task<IdentityResult> DeleteAsync(User user, CancellationToken cancellationToken)
         {
-            var url = $"{ServiceAddress}/user/delete";
+            var url = $"{ServiceAddress}/delete";
             var result = await PostAsync(url, user);
             var ret = await result.Content.ReadAsAsync<bool>();
             return ret ? IdentityResult.Success : IdentityResult.Failed();
@@ -89,13 +89,13 @@ namespace WebStore.Clients.Services.Users
 
         public Task<User> FindByIdAsync(string userId, CancellationToken cancellationToken)
         {
-            var url = $"{ServiceAddress}/user/id/{userId}";
+            var url = $"{ServiceAddress}/{userId}";
             return GetAsync<User>(url);
         }
 
         public async Task<User> FindByNameAsync(string normalizedUserName, CancellationToken cancellationToken)
         {
-            var url = $"{ServiceAddress}/user/normalName/{normalizedUserName}";
+            var url = $"{ServiceAddress}/normalName/{normalizedUserName}";
             var result = await GetAsync<User>(url);
             return result;
         }

@@ -19,25 +19,25 @@ namespace WebStore.ServicesHosting.Controllers
             return await _userStore.GetClaimsAsync(user);
         }
 
-        [HttpPost("newclaim")]
+        [HttpPost("claims/add")]
         public async Task AddClaimsAsync([FromBody]AddClaimsDto claimsDto)
         {
             await _userStore.AddClaimsAsync(claimsDto.User, claimsDto.Claims);
         }
 
-        [HttpPost("claim/newPlace")]
+        [HttpPost("claims/replace")]
         public async Task ReplaceClaimAsync([FromBody]ReplaceClaimsDto claimsDto)
         {
             await _userStore.ReplaceClaimAsync(claimsDto.User, claimsDto.Claim, claimsDto.NewClaim);
         }
 
-        [HttpPost("claim")]
+        [HttpPost("claims/remove")]
         public async Task RemoveClaimsAsync([FromBody]RemoveClaimsDto claimsDto)
         {
             await _userStore.RemoveClaimsAsync(claimsDto.User, claimsDto.Claims);
         }
 
-        [HttpPost("usersForClaim")]
+        [HttpPost("claims/user")]
         public async Task<IList<User>> GetUsersForClaimAsync([FromBody]Claim claim)
         {
             return await _userStore.GetUsersForClaimAsync(claim);

@@ -13,13 +13,13 @@ namespace WebStore.ServicesHosting.Controllers
     {
         #region IUserLoginStore
 
-        [HttpPost("newLogin")]
+        [HttpPost("logins/add")]
         public async Task AddLoginAsync([FromBody]AddLoginDto loginDto)
         {
             await _userStore.AddLoginAsync(loginDto.User, loginDto.UserLoginInfo);
         }
 
-        [HttpPost("login/{loginProvider}/{providerKey}")]
+        [HttpPost("logins/remove/{loginProvider}/{providerKey}")]
         public async Task RemoveLoginAsync([FromBody]User user, string loginProvider, string providerKey)
         {
             await _userStore.RemoveLoginAsync(user, loginProvider, providerKey);
@@ -31,7 +31,7 @@ namespace WebStore.ServicesHosting.Controllers
             return await _userStore.GetLoginsAsync(user);
         }
 
-        [HttpGet("user/login/{loginProvider}/{providerKey}")]
+        [HttpGet("logins/{loginProvider}/{providerKey}")]
         public async Task<User> FindByLoginAsync(string loginProvider, string providerKey)
         {
             return await _userStore.FindByLoginAsync(loginProvider, providerKey);

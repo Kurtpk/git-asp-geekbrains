@@ -55,35 +55,35 @@ namespace WebStore.ServicesHosting.Controllers
             await _userStore.SetNormalizedUserNameAsync(user, normalizedName);
         }
 
-        [HttpPost("user")]
+        [HttpPost]
         public async Task<bool> CreateAsync([FromBody]User user)
         {
             var result = await _userStore.CreateAsync(user);
             return result.Succeeded;
         }
 
-        [HttpPut("user")]
+        [HttpPut]
         public async Task<bool> UpdateAsync([FromBody]User user)
         {
             var result = await _userStore.UpdateAsync(user);
             return result.Succeeded;
         }
 
-        [HttpPost("user/delete")]
+        [HttpPost("delete")]
         public async Task<bool> DeleteAsync([FromBody]User user)
         {
             var result = await _userStore.DeleteAsync(user);
             return result.Succeeded;
         }
 
-        [HttpGet("user/id/{userId}")]
+        [HttpGet("{userId}")]
         public async Task<User> FindByIdAsync(string userId)
         {
             var result = await _userStore.FindByIdAsync(userId);
             return result;
         }
 
-        [HttpGet("user/normalName/{normalizedUserName}")]
+        [HttpGet("normalName/{normalizedUserName}")]
         public async Task<User> FindByNameAsync(string normalizedUserName)
         {
             var result = await _userStore.FindByNameAsync(normalizedUserName);

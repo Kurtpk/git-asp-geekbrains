@@ -11,13 +11,13 @@ namespace WebStore.ServicesHosting.Controllers
     {
         #region IUserRoleStore
 
-        [HttpPost("newRole/{roleName}")]
+        [HttpPost("roles/add/{roleName}")]
         public async Task AddToRoleAsync([FromBody]User user, string roleName)
         {
             await _userStore.AddToRoleAsync(user, roleName);
         }
 
-        [HttpPost("role/{roleName}")]
+        [HttpPost("roles/remove/{roleName}")]
         public async Task RemoveFromRoleAsync([FromBody]User user, string roleName)
         {
             await _userStore.RemoveFromRoleAsync(user, roleName);

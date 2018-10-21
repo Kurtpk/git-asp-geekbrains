@@ -1,0 +1,152 @@
+2018-10-21 18:25:23,872 [11] ?     - The Include operation for navigation '[<generated>_2].Brand' is unnecessary and was ignored because the navigation is not reachable in the final query results. See https://go.microsoft.com/fwlink/?linkid=850303 for more information.
+
+2018-10-21 18:25:23,913 [11] ?     - The Include operation for navigation '[<generated>_2].Section' is unnecessary and was ignored because the navigation is not reachable in the final query results. See https://go.microsoft.com/fwlink/?linkid=850303 for more information.
+
+2018-10-21 18:31:53,923 [8] ?     - The Include operation for navigation '[<generated>_2].Brand' is unnecessary and was ignored because the navigation is not reachable in the final query results. See https://go.microsoft.com/fwlink/?linkid=850303 for more information.
+
+2018-10-21 18:31:53,954 [8] ?     - The Include operation for navigation '[<generated>_2].Section' is unnecessary and was ignored because the navigation is not reachable in the final query results. See https://go.microsoft.com/fwlink/?linkid=850303 for more information.
+
+2018-10-21 18:37:31,294 [1] ?     - Entity Framework Core 2.0.3-rtm-10026 initialized 'WebStoreContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+
+2018-10-21 18:37:33,393 [1] ?     - Executed DbCommand (205ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+
+2018-10-21 18:37:33,506 [1] ?     - Executed DbCommand (10ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Products] AS [p])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+
+2018-10-21 18:37:33,635 [8] ?     - Executed DbCommand (58ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+
+2018-10-21 18:37:33,661 [8] ?     - Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+
+2018-10-21 18:37:33,683 [10] ?     - Executed DbCommand (5ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedEmail] = @__normalizedEmail_0
+
+2018-10-21 18:37:34,043 [8] ?     - Request starting HTTP/1.1 GET http://localhost:50874/api/values  
+
+2018-10-21 18:37:34,045 [9] ?     - Request starting HTTP/1.1 DEBUG http://localhost:50874/  0
+
+2018-10-21 18:37:34,087 [9] ?     - Request finished in 73.8137ms 200 
+
+2018-10-21 18:37:34,306 [8] ?     - Request finished in 291.5629ms 404 
+
+2018-10-21 18:37:36,649 [9] ?     - Request starting HTTP/1.1 GET http://localhost:50874/api/products/sections  
+
+2018-10-21 18:37:36,725 [9] ?     - Executing action method WebStore.ServicesHosting.Controllers.ProductsApiController.GetSections (WebStore.ServicesHosting) with arguments ((null)) - ModelState is Valid
+
+2018-10-21 18:37:36,742 [9] ?     - Entity Framework Core 2.0.3-rtm-10026 initialized 'WebStoreContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+
+2018-10-21 18:37:36,765 [9] ?     - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[Name], [s].[Order], [s].[ParentId]
+FROM [Sections] AS [s]
+
+2018-10-21 18:37:36,780 [9] ?     - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+
+2018-10-21 18:37:36,989 [9] ?     - Executed action WebStore.ServicesHosting.Controllers.ProductsApiController.GetSections (WebStore.ServicesHosting) in 271.2248ms
+
+2018-10-21 18:37:36,995 [9] ?     - Request finished in 343.9563ms 200 application/json; charset=utf-8
+
+2018-10-21 18:37:37,706 [10] ?     - Request starting HTTP/1.1 GET http://localhost:50874/api/products/brands  
+
+2018-10-21 18:37:37,711 [10] ?     - Executing action method WebStore.ServicesHosting.Controllers.ProductsApiController.GetBrands (WebStore.ServicesHosting) with arguments ((null)) - ModelState is Valid
+
+2018-10-21 18:37:37,716 [10] ?     - Entity Framework Core 2.0.3-rtm-10026 initialized 'WebStoreContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+
+2018-10-21 18:37:37,728 [10] ?     - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [b].[Id], [b].[Name], [b].[Order]
+FROM [Brands] AS [b]
+
+2018-10-21 18:37:37,731 [10] ?     - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+
+2018-10-21 18:37:37,739 [10] ?     - Executed action WebStore.ServicesHosting.Controllers.ProductsApiController.GetBrands (WebStore.ServicesHosting) in 26.2644ms
+
+2018-10-21 18:37:37,743 [10] ?     - Request finished in 35.9637ms 200 application/json; charset=utf-8
+
+2018-10-21 18:37:38,616 [9] ?     - Request starting HTTP/1.1 POST http://localhost:50874/api/products application/json; charset=utf-8 
+
+2018-10-21 18:37:38,753 [12] ?     - Executing action method WebStore.ServicesHosting.Controllers.ProductsApiController.GetProducts (WebStore.ServicesHosting) with arguments (WebStore.DomainNew.Filters.ProductFilter) - ModelState is Valid
+
+2018-10-21 18:37:38,765 [12] ?     - Entity Framework Core 2.0.3-rtm-10026 initialized 'WebStoreContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+
+2018-10-21 18:37:38,787 [12] ?     - The Include operation for navigation '[<generated>_2].Brand' is unnecessary and was ignored because the navigation is not reachable in the final query results. See https://go.microsoft.com/fwlink/?linkid=850303 for more information.
+
+2018-10-21 18:37:38,792 [12] ?     - The Include operation for navigation '[<generated>_2].Section' is unnecessary and was ignored because the navigation is not reachable in the final query results. See https://go.microsoft.com/fwlink/?linkid=850303 for more information.
+
+2018-10-21 18:37:38,821 [12] ?     - Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name], [p].[Order], [p].[Price], [p].[ImageUrl], CASE
+    WHEN [p].[BrandId] IS NOT NULL
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END, [p].[BrandId] AS [Id0], [p.Brand].[Name] AS [Name0]
+FROM [Products] AS [p]
+LEFT JOIN [Brands] AS [p.Brand] ON [p].[BrandId] = [p.Brand].[Id]
+
+2018-10-21 18:37:38,826 [12] ?     - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+
+2018-10-21 18:37:38,835 [12] ?     - Executed action WebStore.ServicesHosting.Controllers.ProductsApiController.GetProducts (WebStore.ServicesHosting) in 195.722ms
+
+2018-10-21 18:37:38,840 [12] ?     - Request finished in 224.3197ms 200 application/json; charset=utf-8
+
+2018-10-21 18:37:50,586 [9] ?     - Request starting HTTP/1.1 GET http://localhost:50874/api/products/sections  
+
+2018-10-21 18:37:50,590 [9] ?     - Executing action method WebStore.ServicesHosting.Controllers.ProductsApiController.GetSections (WebStore.ServicesHosting) with arguments ((null)) - ModelState is Valid
+
+2018-10-21 18:37:50,593 [9] ?     - Entity Framework Core 2.0.3-rtm-10026 initialized 'WebStoreContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+
+2018-10-21 18:37:50,596 [9] ?     - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[Name], [s].[Order], [s].[ParentId]
+FROM [Sections] AS [s]
+
+2018-10-21 18:37:50,599 [9] ?     - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+
+2018-10-21 18:37:50,603 [9] ?     - Executed action WebStore.ServicesHosting.Controllers.ProductsApiController.GetSections (WebStore.ServicesHosting) in 12.575ms
+
+2018-10-21 18:37:50,607 [9] ?     - Request finished in 19.7874ms 200 application/json; charset=utf-8
+
+2018-10-21 18:37:50,614 [10] ?     - Request starting HTTP/1.1 GET http://localhost:50874/api/products/brands  
+
+2018-10-21 18:37:50,617 [10] ?     - Executing action method WebStore.ServicesHosting.Controllers.ProductsApiController.GetBrands (WebStore.ServicesHosting) with arguments ((null)) - ModelState is Valid
+
+2018-10-21 18:37:50,620 [10] ?     - Entity Framework Core 2.0.3-rtm-10026 initialized 'WebStoreContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+
+2018-10-21 18:37:50,623 [10] ?     - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [b].[Id], [b].[Name], [b].[Order]
+FROM [Brands] AS [b]
+
+2018-10-21 18:37:50,625 [10] ?     - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+
+2018-10-21 18:37:50,630 [10] ?     - Executed action WebStore.ServicesHosting.Controllers.ProductsApiController.GetBrands (WebStore.ServicesHosting) in 11.1159ms
+
+2018-10-21 18:37:50,634 [10] ?     - Request finished in 17.5539ms 200 application/json; charset=utf-8
+
+2018-10-21 18:37:50,650 [9] ?     - Request starting HTTP/1.1 POST http://localhost:50874/api/products application/json; charset=utf-8 
+
+2018-10-21 18:37:50,654 [9] ?     - Executing action method WebStore.ServicesHosting.Controllers.ProductsApiController.GetProducts (WebStore.ServicesHosting) with arguments (WebStore.DomainNew.Filters.ProductFilter) - ModelState is Valid
+
+2018-10-21 18:37:50,657 [9] ?     - Entity Framework Core 2.0.3-rtm-10026 initialized 'WebStoreContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+
+2018-10-21 18:37:50,662 [9] ?     - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name], [p].[Order], [p].[Price], [p].[ImageUrl], CASE
+    WHEN [p].[BrandId] IS NOT NULL
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END, [p].[BrandId] AS [Id0], [p.Brand].[Name] AS [Name0]
+FROM [Products] AS [p]
+LEFT JOIN [Brands] AS [p.Brand] ON [p].[BrandId] = [p.Brand].[Id]
+
+2018-10-21 18:37:50,664 [9] ?     - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+
+2018-10-21 18:37:50,669 [9] ?     - Executed action WebStore.ServicesHosting.Controllers.ProductsApiController.GetProducts (WebStore.ServicesHosting) in 14.3792ms
+
+2018-10-21 18:37:50,672 [9] ?     - Request finished in 21.6929ms 200 application/json; charset=utf-8
+

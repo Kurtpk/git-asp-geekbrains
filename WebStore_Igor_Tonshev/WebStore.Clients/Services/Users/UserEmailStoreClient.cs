@@ -42,7 +42,7 @@ namespace WebStore.Clients.Services.Users
 
         public Task<User> FindByEmailAsync(string normalizedEmail, CancellationToken cancellationToken)
         {
-            var url = $"{ServiceAddress}/user/email/{normalizedEmail}";
+            var url = $"{ServiceAddress}/email/{normalizedEmail}";
             return GetAsync<User>(url);
         }
 

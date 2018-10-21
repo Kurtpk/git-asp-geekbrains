@@ -21,7 +21,7 @@ namespace WebStore.ServicesHosting.Controllers
             _roleStore = new RoleStore<IdentityRole>(context);
         }
 
-        [HttpPost("newrole")]
+        [HttpPost]
         public async Task<bool> CreateAsync([FromBody]IdentityRole role)
         {
             var result = await _roleStore.CreateAsync(role);
@@ -35,7 +35,7 @@ namespace WebStore.ServicesHosting.Controllers
             return result.Succeeded;
         }
 
-        [HttpPost]
+        [HttpPost("delete")]
         public async Task<bool> DeleteAsync([FromBody]IdentityRole role)
         {
             var result = await _roleStore.DeleteAsync(role);

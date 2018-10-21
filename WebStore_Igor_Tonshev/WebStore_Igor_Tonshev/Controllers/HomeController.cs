@@ -38,6 +38,18 @@ namespace WebStore_Igor_Tonshev.Controllers
             return View();
         }
 
+        public IActionResult ErrorStatus(string id)
+        {
+            if (id == "404")
+                return RedirectToAction("NotFoundPage");
+            return Content($"Статуcный код ошибки: {id}");
+        }
+
+        public IActionResult Error()
+        {
+            return View();
+        }
+
         public IActionResult NotFoundPage()
         {
             return View();

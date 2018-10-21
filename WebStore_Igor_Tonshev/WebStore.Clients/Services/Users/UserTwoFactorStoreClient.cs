@@ -15,7 +15,7 @@ namespace WebStore.Clients.Services.Users
         public Task SetTwoFactorEnabledAsync(User user, bool enabled, CancellationToken cancellationToken)
         {
             user.TwoFactorEnabled = enabled;
-            var url = $"{ServiceAddress}/twoFactor/{enabled}";
+            var url = $"{ServiceAddress}/twoFactorEnabled/{enabled}";
             return PostAsync(url, user);
         }
 
