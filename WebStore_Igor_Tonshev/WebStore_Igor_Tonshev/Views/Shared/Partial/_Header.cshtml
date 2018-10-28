@@ -65,12 +65,12 @@
                             @await Component.InvokeAsync("Cart")
                         </div>
                         <ul class="nav navbar-nav">                         
-                            <li><a asp-controller="Employee" asp-action="Index"><i class="fa fa-user"></i> Список сотрудников</a></li>
+                            <li><a asp-controller="Employee" asp-action="Index" is-active-route><i class="fa fa-user"></i> Список сотрудников</a></li>
                             <li><a href="#"><i class="fa fa-user"></i> Account</a></li>
                             <li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
-                            <li><a asp-controller="Home" asp-action="Checkout"><i class="fa fa-crosshairs"></i> Checkout</a></li>
-                            <li><a asp-controller="Home" asp-action="Cart"><i class="fa fa-shopping-cart"></i> Cart</a></li>
-                            <li><a asp-controller="Home" asp-action="Login"><i class="fa fa-lock"></i> Login</a></li>
+                            <li><a asp-controller="Home" asp-action="Checkout" is-active-route><i class="fa fa-crosshairs"></i> Checkout</a></li>
+                            <li><a asp-controller="Home" asp-action="Cart" is-active-route><i class="fa fa-shopping-cart"></i> Cart</a></li>
+                            <li><a asp-controller="Home" asp-action="Login" is-active-route><i class="fa fa-lock"></i> Login</a></li>
                         </ul>
                     </div>
                 </div>
@@ -94,28 +94,39 @@
                             <span class="icon-bar"></span>
                         </button>
                     </div>
-                    <div class="mainmenu pull-left">
+                    @*<div class="mainmenu pull-left">
                         <ul class="nav navbar-nav collapse navbar-collapse">
-                            <li><a asp-controller="Home" asp-action="Index" class="active">Home</a></li>
+                            <li><a asp-controller="Home" asp-action="Index" is-active-route>Home</a></li>
                             <li class="dropdown">
                                 <a href="#">Shop<i class="fa fa-angle-down"></i></a>
                                 <ul role="menu" class="sub-menu">
-                                    <li><a asp-controller="Catalog" asp-action="Shop">Products</a></li>
-                                    <li><a asp-controller="Catalog" asp-action="ProductDetails">Product Details</a></li>
-                                    <li><a asp-controller="Home" asp-action="Checkout">Checkout</a></li>
-                                    <li><a asp-controller="Home" asp-action="Cart">Cart</a></li>
-                                    <li><a asp-controller="Home" asp-action="Login">Login</a></li>
+                                    <li><a asp-controller="Catalog" asp-action="Shop" is-active-route>Products</a></li>
+                                    <li><a asp-controller="Catalog" asp-action="ProductDetails" is-active-route>Product Details</a></li>
+                                    <li><a asp-controller="Home" asp-action="Checkout" is-active-route>Checkout</a></li>
+                                    <li><a asp-controller="Home" asp-action="Cart" is-active-route>Cart</a></li>
+                                    <li><a asp-controller="Home" asp-action="Login" is-active-route>Login</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown">
                                 <a href="#">Blog<i class="fa fa-angle-down"></i></a>
                                 <ul role="menu" class="sub-menu">
-                                    <li><a asp-controller="Home" asp-action="Blog">Blog List</a></li>
-                                    <li><a asp-controller="Home" asp-action="BlogSingle">Blog Single</a></li>
+                                    <li><a asp-controller="Home" asp-action="Blog" is-active-route>Blog List</a></li>
+                                    <li><a asp-controller="Home" asp-action="BlogSingle" is-active-route>Blog Single</a></li>
                                 </ul>
                             </li>
-                            <li><a asp-controller="Home" asp-action="NotFoundPage">404</a></li>
-                            <li><a asp-controller="Home" asp-action="ContactUs">Contact</a></li>
+                            <li><a asp-controller="Home" asp-action="NotFoundPage" is-active-route>404</a></li>
+                            <li><a asp-controller="Home" asp-action="ContactUs" is-active-route>Contact</a></li>
+                        </ul>
+                    </div>*@
+                    <div class="mainmenu pull-left">
+                        <ul class="nav navbar-nav collapse navbar-collapse">
+                            <li><a is-active-route asp-controller="Home" asp-action="Index">Home</a></li>
+                            <li>
+                                <a is-active-route ignore-action asp-controller="Catalog" asp-action="Shop">Shop</a>
+                            </li>
+                            <li><a is-active-route asp-controller="Home" asp-action="Blog">Blog List</a></li>
+                            <li><a is-active-route asp-controller="Home" asp-action="BlogSingle">Blog Single</a></li>
+                            <li><a is-active-route asp-controller="Home" asp-action="ContactUs">Contact</a></li>
                         </ul>
                     </div>
                 </div>

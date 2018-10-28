@@ -14,11 +14,11 @@
     <link href="~/template/css/font-awesome.min.css" rel="stylesheet" asp-append-version="true">
 
     <environment include="Development">
+        <link href="~/template/css/main.css" rel="stylesheet">
         <link href="~/template/css/typography.css" rel="stylesheet">
         <link href="~/template/css/prettyPhoto.css" rel="stylesheet">
         <link href="~/template/css/price-range.css" rel="stylesheet">
         <link href="~/template/css/animate.css" rel="stylesheet">
-        <link href="~/template/css/main.css" rel="stylesheet">
         <link href="~/template/css/responsive.css" rel="stylesheet">
     </environment>
 
@@ -43,8 +43,9 @@
 
     @await RenderSectionAsync("top", false)
 
-    <section>
+    <section>   
         <div class="container">
+            @await RenderSectionAsync("breadcrumb", false)
             @RenderBody()
         </div>
     </section>
