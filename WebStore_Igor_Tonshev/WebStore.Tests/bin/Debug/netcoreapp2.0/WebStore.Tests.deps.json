@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0",
-    "signature": "05a4e84106c664773d6b21bca615ed6e119bd243"
+    "signature": "a62d42098f08f2cba04fe2fe22b6ae8eee63999b"
   },
   "compilationOptions": {},
   "targets": {
@@ -2999,6 +2999,19 @@
           }
         }
       },
+      "SimpleMvcSitemap/3.1.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc": "2.0.4",
+          "System.Linq.Queryable": "4.3.0",
+          "System.Xml.XmlSerializer": "4.0.11"
+        },
+        "runtime": {
+          "lib/netstandard1.6/SimpleMvcSitemap.dll": {
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "3.0.0.0"
+          }
+        }
+      },
       "SQLitePCLRaw.bundle_green/1.1.7": {
         "dependencies": {
           "SQLitePCLRaw.core": "1.1.7",
@@ -4633,6 +4646,7 @@
           "BuildBundlerMinifier": "2.8.391",
           "Microsoft.AspNetCore.All": "2.0.9",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.0.4",
+          "SimpleMvcSitemap": "3.1.0",
           "WebStore.Clients": "1.0.0",
           "WebStore.DomainNew": "1.0.0",
           "WebStore.Interfaces": "1.0.0",
@@ -6107,6 +6121,13 @@
       "sha512": "sha512-YhEdSQUsTx+C8m8Bw7ar5/VesXvCFMItyZF7G1AUY+OM0VPZUOeAVpJ4Wl6fydBGUYZxojTDR3I6Bj/+BPkJNA==",
       "path": "runtime.win-x86.runtime.native.system.data.sqlclient.sni/4.4.0",
       "hashPath": "runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512"
+    },
+    "SimpleMvcSitemap/3.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zsc2hgvzsAN84F/Hql57iuRrKYuFZNXzYvoRNa9tMS32gRN97EM4moktTJVwU4WVUOHwIICxSruTVVXLHIF5Zw==",
+      "path": "simplemvcsitemap/3.1.0",
+      "hashPath": "simplemvcsitemap.3.1.0.nupkg.sha512"
     },
     "SQLitePCLRaw.bundle_green/1.1.7": {
       "type": "package",

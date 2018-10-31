@@ -227,7 +227,8 @@ namespace WebStore.Tests
                 }
             };
 
-            var products = new List<ProductDto>()
+            var products = new PagedProductDto();
+            products.Products = new List<ProductDto>()
             {
                 new ProductDto()
                 {
