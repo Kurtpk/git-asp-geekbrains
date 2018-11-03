@@ -93,7 +93,7 @@ namespace WebStore.Tests
             cartService.AddToCart(5);
 
             Assert.Equal(1, cart.ItemsCount);
-            Assert.Equal(1, cart.Items.Count);
+            Assert.Single(cart.Items);
             Assert.Equal(5, cart.Items[0].ProductId);
         }
 
@@ -116,7 +116,7 @@ namespace WebStore.Tests
 
             cartService.AddToCart(5);
 
-            Assert.Equal(1, cart.Items.Count);
+            Assert.Single(cart.Items);
             Assert.Equal(3, cart.ItemsCount);
         }
 
@@ -140,7 +140,7 @@ namespace WebStore.Tests
 
             cartService.RemoveFromCart(1);
 
-            Assert.Equal(1, cart.Items.Count);
+            Assert.Single(cart.Items);
             Assert.Equal(2, cart.Items[0].ProductId);
         }
 
@@ -164,7 +164,7 @@ namespace WebStore.Tests
 
             cartService.RemoveAll();
 
-            Assert.Equal(0, cart.Items.Count);
+            Assert.Empty(cart.Items);
         }
 
         [TestMethod]
@@ -213,7 +213,7 @@ namespace WebStore.Tests
             cartService.DecrementFromCart(2);
 
             Assert.Equal(3, cart.ItemsCount);
-            Assert.Equal(1, cart.Items.Count);
+            Assert.Single(cart.Items);
         }
 
         [TestMethod]
@@ -227,7 +227,8 @@ namespace WebStore.Tests
                 }
             };
 
-            var products = new List<ProductDto>()
+            var products = new PagedProductDto();
+            products.Products = new List<ProductDto>()
             {
                 new ProductDto()
                 {

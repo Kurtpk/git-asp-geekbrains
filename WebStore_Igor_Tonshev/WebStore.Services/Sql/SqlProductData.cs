@@ -31,6 +31,24 @@ namespace WebStore.Services.Sql
             }).ToList();
         }
 
+        public SectionDto GetSectionById(int id)
+        {
+            var section = _context.Sections.FirstOrDefault(c => c.Id == id);
+
+            if (section != null)
+            {
+                return new SectionDto()
+                {
+                    Id = section.Id,
+                    Name = section.Name,
+                    ParentId = section.ParentId,
+                    Order = section.Order
+                };
+            }
+
+            return null;
+        }
+
         public IEnumerable<BrandDto> GetBrands()
         {
             return _context.Brands.Select(b => new BrandDto()
@@ -41,7 +59,24 @@ namespace WebStore.Services.Sql
             }).ToList();
         }
 
-        public IEnumerable<ProductDto> GetProducts(ProductFilter filter)
+        public BrandDto GetBrandById(int id)
+        {
+            var brand = _context.Brands.FirstOrDefault(c => c.Id == id);
+
+            if (brand != null)
+            {
+                return new BrandDto()
+                {
+                    Id = brand.Id,
+                    Name = brand.Name,
+                    Order = brand.Order
+                };
+            }
+
+            return null;
+        }
+
+        public PagedProductDto GetProducts(ProductFilter filter)
         {
             var query = _context.Products.Include("Brand").Include("Section").AsQueryable();
 
@@ -56,15 +91,40 @@ namespace WebStore.Services.Sql
             if (filter.SectionId.HasValue)
                 query = query.Where(c => c.SectionId.Equals(filter.SectionId.Value));
 
-            return query.Select(p => new ProductDto()
+            var model = new PagedProductDto
             {
-                Id = p.Id,
-                Name = p.Name,
-                Order = p.Order,
-                Price = p.Price,
-                ImageUrl = p.ImageUrl,
-                Brand = p.BrandId.HasValue ? new BrandDto() { Id = p.Brand.Id, Name = p.Brand.Name, Order = p.Order } : null
-            }).ToList();
+                TotalCount = query.Count()
+            };
+            if (filter.PageSize.HasValue)
+            {
+                model.Products = query.OrderBy(c => c.Order).Skip((filter.Page - 1) * filter.PageSize.Value).Take(filter.PageSize.Value)
+                    .Select(p =>
+                        new ProductDto
+                        {
+                            Id = p.Id,
+                            Name = p.Name,
+                            Order = p.Order,
+                            Price = p.Price,
+                            ImageUrl = p.ImageUrl,
+                            Brand = p.BrandId.HasValue ? new BrandDto() { Id = p.Brand.Id, Name = p.Brand.Name } : null,
+                            Section = new SectionDto() { Id = p.SectionId, Name = p.Section.Name }
+                        }).ToList();
+            }
+            else
+            {
+                model.Products = query.OrderBy(c => c.Order).Select(p =>
+                    new ProductDto
+                    {
+                        Id = p.Id,
+                        Name = p.Name,
+                        Order = p.Order,
+                        Price = p.Price,
+                        ImageUrl = p.ImageUrl,
+                        Brand = p.BrandId.HasValue ? new BrandDto() { Id = p.Brand.Id, Name = p.Brand.Name } : null,
+                        Section = new SectionDto() { Id = p.SectionId, Name = p.Section.Name }
+                    }).ToList();
+            }
+            return model;
         }
 
         public ProductDto GetProductById(int id)
@@ -78,7 +138,8 @@ namespace WebStore.Services.Sql
                 Name = product.Name,
                 ImageUrl = product.ImageUrl,
                 Order = product.Order,
-                Price = product.Price
+                Price = product.Price,
+                Section = new SectionDto() { Id = product.SectionId, Name = product.Section.Name, ParentId = product.Section.ParentId, Order = product.Section.Order }
             };
 
             if (product.Brand != null)

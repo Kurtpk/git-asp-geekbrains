@@ -14,6 +14,10 @@
     @await RenderSectionAsync("scripts", false)
 }
 
+@section breadcrumb{
+    @await RenderSectionAsync("breadcrumb", false)
+}
+
 <div class="row">
     <div class="col-sm-3">
         @await Html.PartialAsync("Partial/_LeftSideBar")

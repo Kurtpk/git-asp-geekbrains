@@ -24,6 +24,13 @@ namespace WebStore.Clients.Services.Products
             return result;
         }
 
+        public SectionDto GetSectionById(int id)
+        {
+            var url = $"{ServiceAddress}/sections/{id}";
+            var result = Get<SectionDto>(url);
+            return result;
+        }
+
         public IEnumerable<BrandDto> GetBrands()
         {
             var url = $"{ServiceAddress}/brands";
@@ -31,11 +38,18 @@ namespace WebStore.Clients.Services.Products
             return result;
         }
 
-        public IEnumerable<ProductDto> GetProducts(ProductFilter filter)
+        public BrandDto GetBrandById(int id)
+        {
+            var url = $"{ServiceAddress}/brands/{id}";
+            var result = Get<BrandDto>(url);
+            return result;
+        }
+
+        public PagedProductDto GetProducts(ProductFilter filter)
         {
             var url = $"{ServiceAddress}";
             var response = Post(url, filter);
-            var result = response.Content.ReadAsAsync<IEnumerable<ProductDto>>().Result;
+            var result = response.Content.ReadAsAsync<PagedProductDto>().Result;
             return result;
         }
 

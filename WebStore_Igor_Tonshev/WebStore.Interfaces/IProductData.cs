@@ -17,17 +17,31 @@ namespace WebStore.Interfaces
         IEnumerable<SectionDto> GetSections();
 
         /// <summary>
+        /// Секция по Id
+        /// </summary>
+        /// <param name="id">Id</param>
+        /// <returns></returns>
+        SectionDto GetSectionById(int id);
+
+        /// <summary>
         /// Список брендов
         /// </summary>
         /// <returns></returns>
         IEnumerable<BrandDto> GetBrands();
 
         /// <summary>
+        /// Бренд по Id
+        /// </summary>
+        /// <param name="id">Id</param>
+        /// <returns></returns>
+        BrandDto GetBrandById(int id);
+
+        /// <summary>
         /// Список товаров
         /// </summary>
         /// <param name="filter">Фильтр товаров</param>
         /// <returns></returns>
-        IEnumerable<ProductDto> GetProducts(ProductFilter filter);
+        PagedProductDto GetProducts(ProductFilter filter);
 
         /// <summary>
         /// Продукт

@@ -16,10 +16,15 @@ namespace WebStore_Igor_Tonshev.ViewComponents
             _productData = productData;
         }
 
-        public IViewComponentResult Invoke()
+        public IViewComponentResult Invoke(string brandId)
         {
+            int.TryParse(brandId, out var brandIdResult);
             var brands = GetBrands();
-            return View(brands);
+            return View(new BrandCompleteViewModel()
+            {
+                Brands = brands,
+                CurrentBrandId = brandIdResult
+            });
         }
 
         private IEnumerable<BrandViewModel> GetBrands()
