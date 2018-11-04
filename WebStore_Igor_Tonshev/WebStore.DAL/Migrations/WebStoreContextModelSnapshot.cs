@@ -195,6 +195,8 @@ namespace WebStore.DAL.Migrations
 
                     b.Property<string>("ImageUrl");
 
+                    b.Property<bool>("IsDelete");
+
                     b.Property<string>("Name");
 
                     b.Property<int>("Order");

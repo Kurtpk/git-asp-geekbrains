@@ -4606,6 +4606,7 @@
         "dependencies": {
           "Microsoft.AspNetCore.Identity": "2.0.4",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.0.4",
+          "Microsoft.AspNetCore.Mvc.ViewFeatures": "2.0.4",
           "Microsoft.EntityFrameworkCore.SqlServer": "2.0.3"
         },
         "runtime": {

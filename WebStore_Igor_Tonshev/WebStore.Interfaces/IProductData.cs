@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using WebStore.DomainNew.Dto;
 using WebStore.DomainNew.Dto.Product;
 using WebStore.DomainNew.Entities;
 using WebStore.DomainNew.Filters;
@@ -49,5 +50,26 @@ namespace WebStore.Interfaces
         /// <param name="id">Идентификатор</param>
         /// <returns>Сущность Product, если нашёл, иначе null</returns>
         ProductDto GetProductById(int id);
+
+        /// <summary>
+        /// Создать продукт
+        /// </summary>
+        /// <param name="product">Сущность Product</param>
+        /// <returns></returns>
+        SaveResult CreateProduct(ProductDto product);
+
+        /// <summary>
+        /// Обновить продукт
+        /// </summary>
+        /// <param name="product">Сущность Product</param>
+        /// <returns></returns>
+        SaveResult UpdateProduct(ProductDto product);
+
+        /// <summary>
+        /// Удалить продукт
+        /// </summary>
+        /// <param name="productId">Id продукта</param>
+        /// <returns></returns>
+        SaveResult DeleteProduct(int productId);
     }
 }
