@@ -37,5 +37,10 @@ namespace WebStore.DomainNew.Entities
         /// Цена
         /// </summary>
         public decimal Price { get; set; }
+
+        /// <summary>
+        /// Удален товар или нет
+        /// </summary>
+        public bool IsDelete { get; set; }
     }
 }

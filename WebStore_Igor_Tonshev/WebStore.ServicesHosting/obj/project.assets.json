@@ -5184,6 +5184,7 @@
         "dependencies": {
           "Microsoft.AspNetCore.Identity": "2.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.0.0",
+          "Microsoft.AspNetCore.Mvc.ViewFeatures": "2.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "2.0.0"
         },
         "compile": {

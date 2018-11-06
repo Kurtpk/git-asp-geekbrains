@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using WebStore.DomainNew.Dto;
 using WebStore.DomainNew.Dto.Product;
 using WebStore.DomainNew.Filters;
 using WebStore.Interfaces;
@@ -55,6 +56,27 @@ namespace WebStore.ServicesHosting.Controllers
         public ProductDto GetProductById(int id)
         {
             return _productData.GetProductById(id);
+        }
+
+        [HttpPost("create")]
+        public SaveResult CreateProduct([FromBody]ProductDto productDto)
+        {
+            var result = _productData.CreateProduct(productDto);
+            return result;
+        }
+
+        [HttpPut]
+        public SaveResult UpdateProduct([FromBody]ProductDto productDto)
+        {
+            var result = _productData.UpdateProduct(productDto);
+            return result;
+        }
+
+        [HttpDelete("{productId}")]
+        public SaveResult DeleteProduct(int productId)
+        {
+            var result = _productData.DeleteProduct(productId);
+            return result;
         }
     }
 }

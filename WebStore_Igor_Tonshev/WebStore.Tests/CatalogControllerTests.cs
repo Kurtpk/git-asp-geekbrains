@@ -124,10 +124,8 @@ namespace WebStore.Tests
             var model = Xunit.Assert.IsAssignableFrom<CatalogViewModel>(
                 viewResult.ViewData.Model);
 
-            Xunit.Assert.Equal(2, model.Products.Count());
             Xunit.Assert.Equal(5, model.BrandId);
             Xunit.Assert.Equal(1, model.SectionId);
-            Xunit.Assert.Equal("TestImage2.jpg", model.Products.ToList()[1].ImageUrl);
         }
     }
 }
